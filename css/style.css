@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Nova+Oval&family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-decoration: none !important; */
+    list-style: none;
+}
+body{
+    text-decoration: none;
+}
+:root{
+    --color1 :#05445E;
+    --color2 :#189AB4;
+    --color3 :#75E6DA;
+    --color6 :#D4F1F4;
+    --color4 :#ffffff;
+    --color5 :#6a6868;
+}
+
+.bgc1{
+    background-color: var(--color1);
+}
+.bgc2{
+    background-color: var(--color2);
+}
+.bgc3{
+    background-color: var(--color3);
+}
+.bgc4{
+    background-color: var(--color4);
+}
+.color1{
+    color: var(--color1);
+}
+.color2{
+    color: var(--color2);
+}
+.color3{
+    color: var(--color3);
+}
+.color4{
+    color: var(--color4);
+}
+.color5{
+    color: var(--color5);
+}
+.color6{
+    color: var(--color6);
+}
+.Poppins{
+    font-family: Poppins;
+}
+.shadow{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+/* header css start */
+.nav-bar .logo a{
+    font-size: 40px;
+    font-family: Nova Oval;
+    color: var(--color4);
+    text-decoration: none;
+}
+.navigation-menu ul{
+    position: relative !important;
+}
+.menu-icon{
+    font-size: 20px;
+    font-family: Poppins;
+    color: var(--color4);
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.search-icon{
+    cursor: pointer;
+}
+.navigation-menu ul li a{
+    font-size: 20px;
+    font-family: Poppins;
+    color: var(--color4);
+    position: relative;
+    text-decoration: none;
+}
+.list-item{
+    position: relative;
+}
+.list-item::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: var(--color4);
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform .3s ease-in-out;
+}
+.list-item:hover::after{
+    transform: scale(1);
+    transform-origin: right;
+}
+.bag-count{
+    width: 20px;
+    height: 25px;
+    border-radius: 40%;
+    background-color: var(--color4);
+    color: var(--color1);
+    text-align: center;
+    line-height: 25px;
+    font-weight: 700;
+}
+#search_live_product,#search_user,#srch_product{
+    width: 250px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: rgb(147, 138, 138);
+    font-size: 17px;
+}
+.category-details{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 70%;
+    /* margin: 0 auto; */
+    border-radius: 0 0 10px 10px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+.display{
+    display: block !important;
+}
+.category{
+    width: 100px;
+    min-height: 90px;
+    text-align: center;
+    padding: 5px;
+}
+.category .cat-img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.category a{    
+    font-size: 13px;
+    color: var(--color5);
+}
+.category .cat-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* header css end */
+
+.login-popup{
+    width: 300px;
+    height: 250px;
+    display: none;
+    position: absolute;
+    z-index: 101;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+.login-popup-btn{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--color3);
+    color: var(--color4);
+    border-radius: 5px;
+    margin: 5px auto;
+    padding: 7px 15px;
+    display: block;
+}
+.login-popup-btn:hover{
+    background-color: var(--color1);
+    color: var(--color4);
+}
+.admin-login-form-container{
+    display: none;
+}
+.login-popup .input-field{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--color5);
+    margin: 20px 0;
+    padding: 0 15px;
+    color: var(--color5);
+}
+.submit_btn{
+    padding: 5px 15px;
+    background-color: var(--color2);
+    color: var(--color4);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.login-popup a{
+    font-size: 12px;
+    margin-left: 20px;
+}
+/* hero slider css start */
+.slider{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+}
+.slide{
+    min-width: 100%;
+    height: 100%;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color6);
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    color: var(--color4);
+    cursor: pointer;
+}
+.prev{
+    left: 2%;
+}
+.next{
+    right: 2%;
+}
+/* hero slider css end */
+/* brands css start */
+.brand-img{
+    width: 100%;
+    height: 100%;
+}
+.brand-img img{
+    width: 100%;
+    height: 100%;
+}
+.load-btn{
+    display: block;
+    margin: 0 auto;
+}
+/* brands css end */
+/* product css start*/
+.product-img{
+    width: 100%;
+    height: 200px;
+}
+.product-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.product-name{
+    font-size: 15px;
+    text-decoration: none;
+}
+.product-price{
+    font-weight: 700;
+}
+.product-ratings{
+    width: 60px;
+}
+.product-item{
+    font-size: 12px;
+    position: relative;
+
+}
+.product-add-btn{
+    font-size: 12px;
+    color: var(--color6);
+    background-color: var(--color2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.product-shop-btn{
+    font-size: 12px;
+    color: var(--color6);
+    background-color: var(--color2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.product-shop-btn:hover{
+    color: var(--color6);
+    background-color: var(--color1);
+}
+/* product css end*/
+/* offer slide css start */
+.offer{
+    height: 200px;
+    overflow: hidden;
+}
+.offer:first-child{
+    border-radius: 10px 0 0 10px;
+}
+.offer:last-child{
+    border-radius: 0 10px 10px 0;
+}
+.offer-img{
+    width: 100%;
+    height: 100%;
+}
+.offer-img img{
+    width: 100%;
+    height: 100%;
+}
+/* offer slide css end */
+/* product_category css start */
+.product_container{
+    height: 80vh;
+}
+/* product_category css end */
+/* footer css start */
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+/* footer css end */
+/*pagination start*/
+.pagination{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*pagination end*/
+/* product details start */
+.product-image{
+    width: 100%;
+    height: 400px;
+}
+.product-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.product-images{
+    width: 100%;
+    height: 100px;
+}
+.product-images img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+.product-star{
+    width: 90px;
+}
+.product-cost,.product-star{
+    font-size: 20px;
+}
+.product-desc{
+    height: 270px;
+    padding: 10px;
+}
+.product-desc img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+/* product details end */
+/* bag details css start */
+.bag-details-container{
+    height: 450px;
+}
+.bag-product-table img,.my-order-table img,.all-product-table img,.all-user-table img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+.quantity{
+    display: block;
+    margin: 0 auto;
+}
+.quantity button{
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    padding: 3px;
+    color: black;
+    text-align: center;
+    border: 1px solid;
+    font-size: 25px;
+    line-height: 5px;
+}
+.quantity input{
+    width: 60px;
+    height: 30px;
+    padding-left: 20px;
+}
+/* bag details css end */
+/* user details css start */
+.user-details-op,.user-details-data,.admin-details-op{
+    height: 580px;
+}
+.admin-details-op,.admin-details-data{
+    height: 720px;
+}
+.user-details-btn,.admin-details-btn{
+    display: block;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: var(--color6);
+}
+.user-details-op .user-image,.admin-details-op .admin-image{
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.user-details .user-image img,.admin-details .admin-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.op-btns .active,.user-details-btn:hover,.admin-details-btn:hover{
+    background-color: var(--color2);
+    color: var(--color4);
+}
+.user-del-btn,.product-edit-btn,.product-del-btn,.del-bag{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+/* user details css end */
+/* payment css start */
+.payment{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    display: none;
+}
+/* payment css end */
+/* media-query */
+@media only screen and (max-width: 1200px){
+    .nav-bar .logo a{
+        font-size: 35px;
+    }
+    .navigation-menu ul li a{
+        font-size: 18px;
+    }
+    #search_product{
+        width: 200px;
+        height: 30px;
+        font-size: 14px;
+
+    }
+}
+@media only screen and (max-width: 1000px){
+    .navigation-menu ul{
+        position: absolute !important;
+        top: 6%;
+        left: 0;
+        background-color: var(--color6);
+        width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .navigation-menu ul li a, .menu-icon{
+        color: var(--color1);
+        font-size: 17px;
+
+    }
+    .slider-container{
+        margin-top: 40px;
+    }
+    .slider{
+        height: 50vh;
+    }
+    
+}
+
+@media only screen and (max-width: 600px){
+    .nav-bar .logo a{
+        font-size: 30px;
+    }
+    .navigation-menu ul li a, .menu-icon{
+        font-size: 15px;
+    }
+    #search_product{
+        width: 200px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .slider{
+        height: 30vh;
+    }
+    .arrow{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+    }
+    .product-shop-btn{
+        padding: 5px 5px;
+        font-size: 11px;
+    }
+    .product-img{
+        height: 150px;
+    }
+    .offer{
+        height: 100px;
+    }
+    .login-popup{
+        top: 12%;
+    }
+}
